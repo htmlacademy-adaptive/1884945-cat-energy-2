@@ -1,0 +1,25 @@
+.sub-card__title-link {
+  @include reset-link;
+}
+
+.sub-card__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-color-dark-special-1;
+}
+
+.sub-card__item {
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 14px;
+  color: $text-color-dark-secondary;
+}
+
+.sub-card__button {
+  @include reset-link;
+
+  font-size: 16px;
+  line-height: 20px;
+}

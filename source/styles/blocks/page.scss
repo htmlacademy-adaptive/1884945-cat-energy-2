@@ -1,0 +1,20 @@
+.page {
+  height: 100%;
+}
+
+.page__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: $font-family-primary;
+  font-style: normal;
+  font-weight: 400;
+}

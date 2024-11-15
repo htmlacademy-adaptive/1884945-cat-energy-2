@@ -1,5 +1,14 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: block;
+
+  &--only-mobile {
+    @media (min-width: $min-width-tablet) {
+      display: none;
+    }
+  }
 }

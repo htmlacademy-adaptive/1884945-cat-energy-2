@@ -1,1 +1,79 @@
-/* здесь используйте глобальные переменные */
+/* Fonts variables */
+$font-family-primary: ("Oswald", "Arial", sans-serif);
+$font-family-secondary: ("Lato", "Arial", sans-serif);
+
+/* Colors variables */
+/* Palette */
+$black: #000000;
+$grey-17rgb: #111111;
+$grey-34rgb: #222222;
+$grey-68rgb: #444444;
+$grey-102rgb: #666666;
+$grey-205rgb: #cdcdcd;
+$grey-211rgb: #d3d3d3;
+$grey-217rgb: #d9d9d9;
+$grey-230rgb: #e6e6e6;
+$grey-231rgb: #e7e7e7;
+$grey-234rgb: #eaeaea;
+$grey-235rgb: #ebebeb;
+$grey-242rgb: #f2f2f2;
+$white: #ffffff;
+$lime: #68b738;
+$green: #5eaa2f;
+$rose: #ff8282;
+
+/* Сolor entities */
+$background-color-primary: $white;
+$background-color-secondary: $grey-242rgb;
+$background-color-special: $grey-234rgb;
+$background-color-accent: $lime;
+
+$border-color-dark-primary: $grey-205rgb;
+$border-color-dark-secondary: $grey-217rgb;
+$border-color-dark-special-1: $grey-230rgb;
+$border-color-dark-special-2: $grey-231rgb;
+$border-color-dark-special-3: $grey-235rgb;
+$border-color-dark-focus: $grey-68rgb;
+$border-color-light-primary: $white;
+$border-color-accent: $lime;
+$border-color-error: $rose;
+
+$button-primary-bg-color: $lime;
+$button-primary-bg-color-hover: $green;
+$button-primary-color-active: $green;
+
+$button-secondary-bg-color: $grey-242rgb;
+$button-secondary-bg-color-hover: $grey-235rgb;
+$button-secondary-bg-color-active: $grey-235rgb;
+
+$compare-slider-button-color: $grey-102rgb;
+$compare-slider-button-color-hover: $lime;
+$compare-slider-button-color-active: rgba($green, 0.6);
+
+$flag-color: $lime; // цвет флажков в checkbox и radio;
+
+$icons-color-light-primary: $white;
+$icons-color-dark-primary: $black;
+$icons-color-dark-secondary: $grey-102rgb;
+$icons-color-dark-hover: $lime;
+$icons-color-dark-active: rgba($lime, 0.3);
+$icons-color-dark-special: $grey-211rgb;
+
+$text-color-dark-primary: $black;
+$text-color-dark-secondary: $grey-68rgb;
+$text-color-dark-special-1: $grey-17rgb;
+$text-color-dark-special-2: $grey-34rgb;
+$text-color-light-primary: $white;
+
+/* Sizes */
+$min-width-mobile: 320px;
+$max-width-mobile: 767px;
+$min-width-tablet: 768px;
+$max-width-tablet: 1439px;
+$min-width-desktop: 1440px;
+$max-width-desktop: 1440px;
+
+$padding-x-mobile: 20px;
+$padding-x-tablet: 30px;
+$padding-x-tablet-form: 70px;
+$padding-x-desktop: 110px;

@@ -1,0 +1,45 @@
+.form__text {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color-dark-secondary;
+}
+
+.form__input {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color-dark-secondary;
+
+  &::placeholder {
+    color: $text-color-dark-secondary;
+  }
+}
+
+.form__comment {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color-dark-secondary;
+
+  &::placeholder {
+    color: $text-color-dark-secondary;
+  }
+}
+
+.form__note {
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}

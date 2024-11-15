@@ -1,0 +1,38 @@
+.main-card {
+  @media (max-width: $max-width-mobile) {
+    @include container;
+  }
+}
+
+.main-card__title-link {
+  @include reset-link;
+}
+
+.main-card__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-color-dark-special-1;
+}
+
+.main-card__text {
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-color-dark-secondary;
+}
+
+.main-card__item {
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-color-dark-secondary;
+}
+
+.main-card__button {
+  @include reset-link;
+
+  font-size: 16px;
+  line-height: 20px;
+}

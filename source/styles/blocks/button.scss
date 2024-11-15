@@ -1,0 +1,20 @@
+.button {
+  @include reset-button;
+
+  min-width: 100%;
+  min-height: 40px;
+  padding: 10px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  &--primary {
+    color: $text-color-light-primary;
+    background-color: $button-primary-bg-color;
+  }
+
+  &--secondary {
+    color: $text-color-dark-secondary;
+    background-color: $button-secondary-bg-color;
+  }
+}

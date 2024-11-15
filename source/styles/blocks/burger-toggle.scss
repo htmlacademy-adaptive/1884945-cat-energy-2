@@ -1,0 +1,58 @@
+.burger-toggle {
+  @include reset-button;
+
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $icons-color-dark-primary;
+    box-shadow: 0 8px 0 0 $icons-color-dark-primary, 0 16px 0 0 $icons-color-dark-primary;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &.opened-nav {
+    width: 18px;
+    height: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -3px;
+      transform: rotate(45deg);
+      width: 24px;
+      height: 2px;
+      border: none;
+      background-color: $icons-color-dark-primary;
+      box-shadow: 0 0 0 0 $icons-color-dark-primary, 0 0 0 0 $icons-color-dark-primary;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -3px;
+      transform: rotate(-45deg);
+      width: 24px;
+      height: 2px;
+      border: none;
+      background-color: $icons-color-dark-primary;
+      box-shadow: 0 0 0 0 $icons-color-dark-primary, 0 0 0 0 $icons-color-dark-primary;
+    }
+  }
+}

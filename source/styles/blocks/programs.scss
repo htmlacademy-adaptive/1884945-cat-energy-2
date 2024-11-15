@@ -1,0 +1,29 @@
+.programs__list {
+  @include reset-list;
+}
+
+.programs__item {
+  background-color: $background-color-secondary;
+}
+
+.programs__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__text {
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-dark-secondary;
+}
+
+.programs__link {
+  @include reset-link;
+
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $text-color-dark-primary;
+}

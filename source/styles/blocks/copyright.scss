@@ -1,0 +1,7 @@
+.copyright__link {
+  @include reset-link;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-dark-secondary;
+}

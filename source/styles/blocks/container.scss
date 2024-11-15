@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  min-width: $min-width-mobile;
+  margin: 0 auto;
+  padding: 0 $padding-x-mobile;
+
+  @media (min-width: $min-width-tablet) {
+    min-width: $min-width-tablet;
+    padding: 0 $padding-x-tablet;
+
+    &--form-tablet {
+      padding: 0 $padding-x-tablet-form;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: $min-width-desktop;
+    padding: 0 $padding-x-desktop;
+  }
+}

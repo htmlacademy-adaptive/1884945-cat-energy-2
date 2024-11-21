@@ -7,8 +7,12 @@ $font-family-secondary: ("Lato", "Arial", sans-serif);
 $black: #000000;
 $grey-17rgb: #111111;
 $grey-34rgb: #222222;
+$grey-62rgb: #3e3e3e;
 $grey-68rgb: #444444;
+$grey-71rgb: #474747;
 $grey-102rgb: #666666;
+$grey-107rgb: #6b6b6b;
+$grey-186rgb: #bababa;
 $grey-205rgb: #cdcdcd;
 $grey-211rgb: #d3d3d3;
 $grey-217rgb: #d9d9d9;
@@ -24,6 +28,7 @@ $rose: #ff8282;
 
 /* Сolor entities */
 $background-color-primary: $white;
+$background-color-substrate: $grey-71rgb;
 $background-color-secondary: $grey-242rgb;
 $background-color-special: $grey-234rgb;
 $background-color-accent: $lime;
@@ -34,13 +39,14 @@ $border-color-dark-special-1: $grey-230rgb;
 $border-color-dark-special-2: $grey-231rgb;
 $border-color-dark-special-3: $grey-235rgb;
 $border-color-dark-focus: $grey-68rgb;
+$border-color-checkbox-hover: $grey-186rgb;
 $border-color-light-primary: $white;
 $border-color-accent: $lime;
 $border-color-error: $rose;
 
 $button-primary-bg-color: $lime;
 $button-primary-bg-color-hover: $green;
-$button-primary-color-active: $green;
+$button-primary-bg-color-active: $green;
 
 $button-secondary-bg-color: $grey-242rgb;
 $button-secondary-bg-color-hover: $grey-235rgb;
@@ -63,6 +69,8 @@ $text-color-dark-primary: $black;
 $text-color-dark-secondary: $grey-68rgb;
 $text-color-dark-special-1: $grey-17rgb;
 $text-color-dark-special-2: $grey-34rgb;
+$text-color-dark-special-3: $grey-62rgb;
+$text-color-dark-special-4: $grey-107rgb;
 $text-color-light-primary: $white;
 
 /* Sizes */
@@ -77,3 +85,6 @@ $padding-x-mobile: 20px;
 $padding-x-tablet: 30px;
 $padding-x-tablet-form: 70px;
 $padding-x-desktop: 110px;
+
+/* Others */
+$transition-time: 0.3s;

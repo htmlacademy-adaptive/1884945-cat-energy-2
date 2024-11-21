@@ -1,3 +1,24 @@
 .socials {
   @include reset-list;
 }
+
+.socials__link {
+  @include reset-link;
+  @include mask("", $icons-color-dark-secondary, $icons-color-dark-hover, $icons-color-dark-hover, $icons-color-dark-active);
+
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &--vk::before {
+    mask-image: url("../../icons/stack.svg#vkontakte");
+  }
+
+  &--youtube::before {
+    mask-image: url("../../icons/stack.svg#youtube");
+  }
+
+  &--telegram::before {
+    mask-image: url("../../icons/stack.svg#telegram");
+  }
+}

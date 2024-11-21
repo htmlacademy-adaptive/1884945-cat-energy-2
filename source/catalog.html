@@ -18,27 +18,30 @@
   <header class="header container">
     <a class="header__logo" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
-        <source media="(min-width: 768px)" srcset="./images/logos/logo-tablet.svg" width="174" height="50">
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logos/logo-tablet.svg" width="174" height="50">
         <img class="header__img" width="33" height="38" src="./images/logos/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--only-mobile" href="index.html">
-      <img class="header__img" width="101" height="18" src="./images/logos/logo-text.svg" alt="Cat Energy">
+    <a class="header__logo header__logo--secondary" href="index.html">
+      <span class="visually-hidden">Перейти на гланую страницу</span>
+      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
     </a>
     <nav class="main-nav">
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
           <a class="main-nav__link" href="./index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--current" href="#">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
-      <button class="burger-toggle" type="button"></button>
+      <button class="burger-toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </nav>
   </header>
 
@@ -48,14 +51,15 @@
       <h2 class="visually-hidden">Основные товары</h2>
       <ul class="main-cards">
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/chicken500-desktop@1x.png 1x, images/cards/chicken500-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/chicken500-tablet@1x.png 1x, images/cards/chicken500-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/chicken500-mobile@1x.png" srcset="images/cards/chicken500-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 500 г</h3>
           </a>
           <dl class="main-card__list">
@@ -72,18 +76,19 @@
               <dd class="main-card__value">700 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/chicken1000-desktop@1x.png 1x, images/cards/chicken1000-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/chicken1000-tablet@1x.png 1x, images/cards/chicken1000-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/chicken1000-mobile@1x.png" srcset="images/cards/chicken1000-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 1000 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -100,18 +105,19 @@
               <dd class="main-card__value">1000 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/fish500-desktop@1x.png 1x, images/cards/fish500-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/fish500-tablet@1x.png 1x, images/cards/fish500-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/fish500-mobile@1x.png" srcset="images/cards/fish500-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 500 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -128,18 +134,19 @@
               <dd class="main-card__value">700 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/fish1000-desktop@1x.png 1x, images/cards/fish1000-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/fish1000-tablet@1x.png 1x, images/cards/fish1000-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/fish1000-mobile@1x.png" srcset="images/cards/fish1000-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 1000 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -156,18 +163,19 @@
               <dd class="main-card__value">1000 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/buckwheat500-desktop@1x.png 1x, images/cards/buckwheat500-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/buckwheat500-tablet@1x.png 1x, images/cards/buckwheat500-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/buckwheat500-mobile@1x.png" srcset="images/cards/buckwheat500-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy SLIM 500 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -184,18 +192,19 @@
               <dd class="main-card__value">400 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/buckwheat1000-desktop@1x.png 1x, images/cards/buckwheat1000-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/buckwheat1000-tablet@1x.png 1x, images/cards/buckwheat1000-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/buckwheat1000-mobile@1x.png" srcset="images/cards/buckwheat1000-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy SLIM 1000 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -212,18 +221,19 @@
               <dd class="main-card__value">700 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card">
-          <a class="main-card__picture-link" href="">
+          <a class="main-card__picture-link" href="#">
+            <span class="visually-hidden">Перейти к карточке товара</span>
             <picture>
               <source type="image/png" media="(min-width: 1440px)" width="169" height="210" srcset="images/cards/rice500-desktop@1x.png 1x, images/cards/rice500-desktop@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" width="200" height="210" srcset="images/cards/rice500-tablet@1x.png 1x, images/cards/rice500-tablet@2x.png 2x">
               <img class="main-card__img" width="140" height="107" src="images/cards/rice500-mobile@1x.png" srcset="images/cards/rice500-mobile@2x.png 2x" alt="">
             </picture>
           </a>
-          <a class="main-card__title-link" href="">
+          <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy slim 500 г</h3>
           </a>
           <dl class="main-card__dl">
@@ -240,13 +250,13 @@
               <dd class="main-card__value">500 ₽</dd>
             </div>
           </dl>
-          <a class="main-card__button button button--primary" href="">Заказать</a>
+          <a class="main-card__button button button--primary" href="#">Заказать</a>
         </li>
 
         <li class="main-card main-card--special">
           <h3 class="main-card__title">Показать еще 100500 товаров</h3>
           <p class="main-card__text">На самом деле вкусов гораздо больше!</p>
-          <a class="main-card__button button button--secondary" href="">Показать все</a>
+          <a class="main-card__button button button--secondary" href="#">Показать все</a>
         </li>
       </ul>
     </section>
@@ -255,7 +265,7 @@
       <h2 class="sub-products__title">Дополнительные товары</h2>
       <ul class="sub-cards">
         <li class="sub-card">
-          <a class="sub-card__title-link" href="">
+          <a class="sub-card__title-link" href="#">
             <h3 class="sub-card__title">Сахарозаменитель</h3>
           </a>
           <dl class="sub-card__list">
@@ -264,10 +274,10 @@
               <dd class="sub-card__price">200 ₽</dd>
             </div>
           </dl>
-          <a class="sub-card__button button button--primary" href="">заказать</a>
+          <a class="sub-card__button button button--primary" href="#">заказать</a>
         </li>
         <li class="sub-card">
-          <a class="sub-card__title-link" href="">
+          <a class="sub-card__title-link" href="#">
             <h3 class="sub-card__title">питьевая вода</h3>
           </a>
           <dl class="sub-card__list">
@@ -276,10 +286,10 @@
               <dd class="sub-card__price">50 ₽</dd>
             </div>
           </dl>
-          <a class="sub-card__button button button--primary" href="">заказать</a>
+          <a class="sub-card__button button button--primary" href="#">заказать</a>
         </li>
         <li class="sub-card">
-          <a class="sub-card__title-link" href="">
+          <a class="sub-card__title-link" href="#">
             <h3 class="sub-card__title">молоко</h3>
           </a>
           <dl class="sub-card__list">
@@ -288,10 +298,10 @@
               <dd class="sub-card__price">100 ₽</dd>
             </div>
           </dl>
-          <a class="sub-card__button button button--primary" href="">заказать</a>
+          <a class="sub-card__button button button--primary" href="#">заказать</a>
         </li>
         <li class="sub-card">
-          <a class="sub-card__title-link" href="">
+          <a class="sub-card__title-link" href="#">
             <h3 class="sub-card__title">витамины</h3>
           </a>
           <dl class="sub-card__list">
@@ -300,7 +310,7 @@
               <dd class="sub-card__price">300 ₽</dd>
             </div>
           </dl>
-          <a class="sub-card__button button button--primary" href="">заказать</a>
+          <a class="sub-card__button button button--primary" href="#">заказать</a>
         </li>
       </ul>
       <div class="gift">
@@ -330,38 +340,41 @@
         </div>
         <!-- Потом здесь будет карта -->
         <picture>
-          <source media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
+          <source type="image/png" media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
           <img class="contacts__img" width="320" height="362" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="">
         </picture>
       </section>
     </div>
     <div class="wrapper wrapper--bottom">
       <div class="bottom container">
-        <a class="bottom__link" href="index.html">
-          <img class="bottom__logo" width="128" height="24" src="./images/logos/logo-text.svg" alt="CAT ENERGY">
+        <a class="bottom__logo" href="index.html">
+          <span class="visually-hidden">Перейти на гланую страницу</span>
+          <img class="bottom__img" width="128" height="24" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
         </a>
         <ul class="socials">
           <li class="socials__item">
-            <a class="socials__link" href="https://vk.com/htmlacademy">
+            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="https://t.me/htmlacademy">
+            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
         </ul>
         <div class="copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__icon-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Переход на сайт разработчика</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Перейти на сайт разработчика</span>
+            HTML Academy
+            <div class="copyright__icon">
+            </div>
           </a>
         </div>
       </div>

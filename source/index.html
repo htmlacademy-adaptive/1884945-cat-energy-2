@@ -17,19 +17,21 @@
 
   <header class="header container">
     <a class="header__logo" href="index.html">
+      <span class="visually-hidden">Перейти на гланую страницу</span>
       <picture>
-        <source media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
-        <source media="(min-width: 768px)" srcset="./images/logos/logo-tablet.svg" width="174" height="50">
+        <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logos/logo-tablet.svg" width="174" height="50">
         <img class="header__img" width="33" height="38" src="./images/logos/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--only-mobile" href="index.html">
-      <img class="header__img" width="101" height="18" src="./images/logos/logo-text.svg" alt="Cat Energy">
+    <a class="header__logo header__logo--secondary" href="index.html">
+      <span class="visually-hidden">Перейти на гланую страницу</span>
+      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
     </a>
     <nav class="main-nav">
-      <ul class="main-nav__list">
+      <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -56,21 +58,21 @@
           <source type="image/png" media="(min-width: 768px)" width="709" height="609" srcset="images/intro/can-tablet@1x.png 1x, images/intro/can-tablet@2x.png 2x">
           <img class="intro__img" width="280" height="270" src="images/intro/can-mobile@1x.png" srcset="images/intro/can-mobile@2x.png 2x" alt="Банка с кормом Cat Energy">
         </picture>
-        <a class="intro__button button button--primary" href="">Подобрать программу</a>
+        <a class="intro__button button button--primary" href="form.html">Подобрать программу</a>
       </section>
     </div>
 
     <section class="programs container">
       <h2 class="visually-hidden">Программы питания</h2>
       <ul class="programs__list">
-        <li class="programs__item">
+        <li class="programs__item programs__item--slim">
           <h3 class="programs__title">Похудение</h3>
           <p class="programs__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a class="programs__link" href="catalog.html">Каталог slim</a>
         </li>
-        <li class="programs__item">
+        <li class="programs__item programs__item--strong">
           <h3 class="programs__title">Набор массы</h3>
           <p class="programs__text">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -83,16 +85,16 @@
     <section class="advantages container">
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--leaf">
           <p class="advantages__text">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--chemistry">
           <p class="advantages__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--eat">
           <p class="advantages__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--scales">
           <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
@@ -124,7 +126,7 @@
             <img class="compare-slider__img compare-slider__img--after" width="280" height="256" src="images/compare-slider/cat-after-mobile@1x.png" srcset="images/compare-slider/cat-after-mobile@2x.png 2x" alt="Кот после похудения">
           </picture>
           <label class="visually-hidden" for="compare-slider">До и после</label>
-          <input class="compare-slider__range" type="range" min="0" max="100" value="50" id="compare-slider" oninput="slide()">
+          <input class="compare-slider__range" type="range" min="0" max="100" value="50" id="compare-slider" name="compare-slider">
         </div>
       </section>
     </div>
@@ -141,38 +143,41 @@
         </div>
         <!-- Потом здесь будет карта -->
         <picture>
-          <source media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
+          <source type="image/png" media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
           <img class="contacts__img" width="320" height="362" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="">
         </picture>
       </section>
     </div>
     <div class="wrapper wrapper--bottom">
       <div class="bottom container">
-        <a class="bottom__link" href="index.html">
-          <img class="bottom__logo" width="128" height="24" src="./images/logos/logo-text.svg" alt="CAT ENERGY">
+        <a class="bottom__logo" href="index.html">
+          <span class="visually-hidden">Перейти на гланую страницу</span>
+          <img class="bottom__img" width="128" height="24" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
         </a>
         <ul class="socials">
           <li class="socials__item">
-            <a class="socials__link" href="https://vk.com/htmlacademy">
+            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link" href="https://t.me/htmlacademy">
+            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
         </ul>
         <div class="copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__icon-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">Переход на сайт разработчика</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Перейти на сайт разработчика</span>
+            HTML Academy
+            <div class="copyright__icon">
+            </div>
           </a>
         </div>
       </div>

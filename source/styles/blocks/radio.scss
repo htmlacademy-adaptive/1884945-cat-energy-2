@@ -1,0 +1,35 @@
+.radio {
+  appearance: none;
+  position: relative;
+
+  margin: 0;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: solid 1px $border-color-dark-primary;
+  background-color: $background-color-primary;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    margin: auto;
+    width: 0;
+    height: 0;
+
+    background-color: $background-color-accent;
+    border-radius: 50%;
+  }
+
+  &:checked::after {
+    width: 13px;
+    height: 13px;
+  }
+
+  &:hover {
+    border: solid 1px $border-color-checkbox-hover;
+  }
+}

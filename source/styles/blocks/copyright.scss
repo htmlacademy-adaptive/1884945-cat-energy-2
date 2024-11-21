@@ -1,7 +1,38 @@
 .copyright__link {
   @include reset-link;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   font-size: 16px;
   line-height: 20px;
   color: $text-color-dark-secondary;
+
+  cursor: pointer;
+
+  &:hover .copyright__icon {
+    @include transition;
+
+    background-color: $icons-color-dark-hover;
+  }
+
+  &:focus .copyright__icon {
+    @include transition;
+
+    background-color: $icons-color-dark-hover;
+  }
+
+  &:active {
+    @include transition;
+
+    opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  width: 27px;
+  height: 34px;
+  mask-image: url("../../icons/stack.svg#html-academy");
+  background-color: $icons-color-dark-secondary;
 }

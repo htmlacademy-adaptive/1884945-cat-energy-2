@@ -1,13 +1,63 @@
+.advantages {
+  padding-top: 10px;
+  padding-bottom: 49px;
+}
+
 .advantages__list {
   @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.advantages__item {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    display: block;
+    min-width: 60px;
+    height: 60px;
+
+    background-color: $background-color-accent;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--leaf::before {
+    background-image: url("../../icons/stack.svg#leaf");
+    background-size: 30px 32px;
+  }
+
+  &--chemistry::before {
+    background-image: url("../../icons/stack.svg#chemistry");
+    background-size: 26px 29px;
+  }
+
+  &--eat::before {
+    background-image: url("../../icons/stack.svg#eat");
+    background-size: 25px 30px;
+  }
+
+  &--scales::before {
+    background-image: url("../../icons/stack.svg#scales");
+    background-size: 26px 31px;
+  }
 }
 
 .advantages__title {
+  margin: 0 0 40px;
   font-size: 36px;
   line-height: 40px;
 }
 
 .advantages__text {
+  margin: 0;
+
   font-family: $font-family-secondary;
   font-size: 14px;
   line-height: 18px;

@@ -1,12 +1,38 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 15px;
+
+  position: relative;
 }
 
 .header__logo {
   display: block;
+  width: 33px;
+  height: 38px;
 
-  &--only-mobile {
+  &:hover {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:active {
+    @include transition;
+    opacity: 0.6;
+  }
+
+  &--secondary {
+    width: 101px;
+    height: 18px;
+    margin-right: 9px;
+
     @media (min-width: $min-width-tablet) {
       display: none;
     }

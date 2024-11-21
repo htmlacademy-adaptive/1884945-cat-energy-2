@@ -1,0 +1,34 @@
+.checkbox {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+
+  border: solid 1px $border-color-dark-primary;
+  background-color: $background-color-primary;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    margin: auto;
+    width: 0;
+    height: 0;
+  }
+
+  &:checked::after {
+    width: 18px;
+    height: 14px;
+
+    background-image: url("../../icons/stack.svg#checkbox-flag");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    border: solid 1px $border-color-checkbox-hover;
+  }
+}

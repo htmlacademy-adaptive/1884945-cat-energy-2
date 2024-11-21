@@ -1,0 +1,16 @@
+.bottom__logo {
+  &:hover {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:active {
+    @include transition;
+    opacity: 0.6;
+  }
+}

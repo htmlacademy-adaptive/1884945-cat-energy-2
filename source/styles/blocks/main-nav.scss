@@ -1,12 +1,72 @@
 .main-nav__list {
   @include reset-list;
+
+  @media (max-width: $max-width-mobile) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    &--closed {
+      display: none;
+    }
+  }
+}
+
+.main-nav__item {
+  @media (max-width: $max-width-mobile) {
+    @include container;
+
+    border-top: solid 2px $border-color-dark-special-1;
+    background-color: $background-color-primary;
+  }
 }
 
 .main-nav__link {
   @include reset-link;
 
+  display: inline-block;
+  padding-bottom: 10px;
+
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
   color: $text-color-dark-primary;
+
+  cursor: pointer;
+
+  &:not(.main-nav__link--current):hover {
+    @include transition;
+
+    opacity: 0.6;
+  }
+
+  &:not(.main-nav__link--current):focus {
+    @include transition;
+
+    opacity: 0.6;
+  }
+
+  &:not(.main-nav__link--current):active {
+    @include transition;
+
+    opacity: 0.3;
+  }
+
+  &--current {
+    border-bottom: solid 4px $border-color-accent;
+    cursor: default;
+  }
+
+  @media (max-width: $max-width-mobile) {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    &--current {
+      border-bottom: none;
+    }
+  }
 }

@@ -38,3 +38,52 @@
   margin: 0 auto;
   padding: 0 $padding-x;
 }
+
+@mixin transition {
+  transition: $transition-time;
+}
+
+@mixin mask ($mask-image, $base-color, $hover-color, $focus-hover, $active-color) {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $base-color;
+    mask-image: url($mask-image);
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover::before {
+    @include transition;
+
+    background-color: $hover-color;
+  }
+
+  &:focus::before {
+    @include transition;
+
+    background-color: $focus-hover;
+  }
+
+  &:active::before {
+    @include transition;
+
+    background-color: $active-color;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

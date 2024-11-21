@@ -1,29 +1,80 @@
 .programs__list {
   @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 .programs__item {
+  padding: 30px 20px 22px;
   background-color: $background-color-secondary;
+  background-repeat: no-repeat;
+
+
+  &--slim {
+    background-image: url("../../icons/stack.svg#cat-slim");
+    background-size: 50px 53px;
+    background-position: 20px 21px;
+  }
+
+  &--strong {
+    background-image: url("../../icons/stack.svg#cat-strong");
+    background-size: 67px 50px;
+    background-position: 13px 24px;
+  }
 }
 
 .programs__title {
+  margin: 0 0 29px;
+  padding-left: 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
 
 .programs__text {
+  margin: 0 0 18px;
+  padding-bottom: 23px;
+
   font-family: $font-family-secondary;
   font-size: 14px;
   line-height: 18px;
   color: $text-color-dark-secondary;
+
+  border-bottom: solid 1px $border-color-dark-secondary;
 }
 
 .programs__link {
   @include reset-link;
 
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $text-color-dark-primary;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+
+    background-color: $icons-color-dark-primary;
+    mask-image: url("../../icons/stack.svg#arrow");
+  }
+
+  &:hover::after {
+    @include transition;
+    mask-image: url("../../icons/stack.svg#arrow-hover");
+  }
+
+  &:active {
+    @include transition;
+    opacity: 0.3;
+  }
 }

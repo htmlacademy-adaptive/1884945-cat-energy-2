@@ -3,13 +3,34 @@
     @media (max-width: $max-width-mobile) {
       background:
         linear-gradient(to bottom, rgba($background-color-accent, 0.85) 302px, $background-color-primary 108px),
-        image-set(url("../../images/backgrounds/intro-mobile@1x.jpg") 1x, url("../../images/backgrounds/intro-mobile@2x.jpg") 2x) top center no-repeat,
-        linear-gradient(to bottom, $background-color-substrate 302px, $background-color-primary 108px);
+        image-set(url("../../images/backgrounds/intro-mobile@1x.jpg") 1x, url("../../images/backgrounds/intro-mobile@2x.jpg") 2x) top center no-repeat $background-color-substrate;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 50%;
+
+        display: block;
+        min-width: 50%;
+        height: 694px;
+
+        background:
+          linear-gradient(to right, rgba($background-color-accent, 0.85), rgba($background-color-accent, 0.85)),
+          image-set(url("../../images/backgrounds/intro-desktop@1x.jpg") 1x, url("../../images/backgrounds/intro-desktop@2x.jpg") 2x) no-repeat $background-color-substrate;
+      }
     }
   }
 
   &--example {
     background-color: $background-color-special;
+
+    @media (min-width: $min-width-tablet) {
+      background: linear-gradient(to top, $background-color-special 462px, $background-color-primary 462px 100%);
+    }
   }
 
   &--bottom {

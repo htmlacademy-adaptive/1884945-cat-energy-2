@@ -15,7 +15,7 @@
 
 <body class="page__body">
 
-  <header class="header container">
+  <header class="header header--no-js container">
     <a class="header__logo" href="index.html">
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
@@ -23,12 +23,12 @@
         <img class="header__img" width="33" height="38" src="./images/logos/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--secondary" href="index.html">
+    <a class="header__logo header__logo--secondary header__logo--no-js" href="index.html">
       <span class="visually-hidden">Перейти на гланую страницу</span>
-      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
+      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text-header.svg" alt="Текстовый логотип Cat Energy">
     </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list main-nav__list--closed">
+    <nav class="main-nav main-nav--no-js main-nav--form">
+      <ul class="main-nav__list main-nav__list--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="./index.html">Главная</a>
         </li>
@@ -39,54 +39,56 @@
           <a class="main-nav__link main-nav__link--current" href="#">Подбор программы</a>
         </li>
       </ul>
-      <button class="burger-toggle" type="button">
+      <button class="burger-toggle burger-toggle--no-js opened-nav" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </nav>
   </header>
 
   <main class="main">
-    <h1 class="page__title container container--form-tablet">Подбор программы</h1>
+    <h1 class="page__title page__title--form container container--form-tablet">Подбор программы</h1>
     <form class="form" action="https://echo.htmlacademy.ru" method="get">
       <p class="form__text container container--form-tablet">
         Заполните анкету, и мы подберем<br>
         программу питания для вашего кота
       </p>
-      <fieldset class="form__fieldset container container--form-tablet">
-        <legend class="form__legend visually-hidden">Данные кота</legend>
-        <label class="form__label" for="cat-name">
-          ИМЯ:*
-          <input class="form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик">
-        </label>
-        <label class="form__label" for="cat-weight">
-          Вес (кг):*
-          <input class="form__input" type="number" id="cat-weight" name="cat-weight" value="7">
-        </label>
+      <div class="form__fieldsets-container">
+        <fieldset class="form__fieldset form__fieldset--no-title form__fieldset--customer-data">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="form__label" for="cat-name">
+            ИМЯ:*
+            <input class="form__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик">
+          </label>
+          <label class="form__label" for="cat-weight">
+            Вес (кг):*
+            <input class="form__input" type="number" id="cat-weight" name="cat-weight" value="7">
+          </label>
 
-        <label class="form__label" for="cat-age">
-          Возраст (лет):
-          <input class="form__input" type="number" id="cat-age" name="cat-age" value="7">
-        </label>
-      </fieldset>
+          <label class="form__label" for="cat-age">
+            Возраст (лет):
+            <input class="form__input" type="number" id="cat-age" name="cat-age" value="7">
+          </label>
+        </fieldset>
 
-      <fieldset class="form__fieldset container container--form-tablet">
-        <legend class="form__legend visually-hidden">Необходимый результат</legend>
-        <label class="form__label">
-          <input class="radio" type="radio" name="program" id="slim" value="slim" checked>
-          Похудение
-        </label>
-        <label class="form__label">
-          <input class="radio" type="radio" name="program" id="strong" value="strong">
-          Набор массы
-        </label>
-        <label class="form__label">
-          <input class="radio" type="radio" name="program" id="dontknow" value="dontknow">
-          Не знаю (нужен ваш совет)
-        </label>
-      </fieldset>
+        <fieldset class="form__fieldset form__fieldset--no-title form__fieldset--program">
+          <legend class="visually-hidden">Необходимый результат</legend>
+          <label class="form__label form__label--program">
+            <input class="radio" type="radio" name="program" id="slim" value="slim" checked>
+            Похудение
+          </label>
+          <label class="form__label form__label--program">
+            <input class="radio" type="radio" name="program" id="strong" value="strong">
+            Набор массы
+          </label>
+          <label class="form__label form__label--program">
+            <input class="radio" type="radio" name="program" id="dontknow" value="dontknow">
+            Не знаю (нужен ваш совет)
+          </label>
+        </fieldset>
+      </div>
 
-      <fieldset class="form__fieldset container container--form-tablet">
-        <legend class="form__legend">Контактные данные (владельца кота)</legend>
+      <fieldset class="form__fieldset form__fieldset--contacts container container--form-tablet">
+        <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</legend>
         <label class="form__label">
           E-mail:*
           <input class="form__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com" autocomplete="on" required>
@@ -98,26 +100,26 @@
         </label>
       </fieldset>
 
-      <fieldset class="form__fieldset container container--form-tablet">
+      <fieldset class="form__fieldset form__fieldset--comment container container--form-tablet">
         <legend class="form__legend">Комментарий</legend>
         <textarea class="form__comment" id="comment" name="comment" rows="5" cols="33" placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
 
-      <fieldset class="form__fieldset container container--form-tablet">
+      <fieldset class="form__fieldset form__fieldset--additionally container container--form-tablet">
         <legend class="form__legend">Дополнительно</legend>
-        <label class="form__label">
+        <label class="form__label form__label--additionally">
           <input class="checkbox" type="checkbox" name="additionally" id="sweetener" value="sweetener" checked>
           Сахарозаменитель
         </label>
-        <label class="form__label">
+        <label class="form__label form__label--additionally">
           <input class="checkbox" type="checkbox" name="additionally" id="water" value="water">
           Питьевая вода
         </label>
-        <label class="form__label">
+        <label class="form__label form__label--additionally">
           <input class="checkbox" type="checkbox" name="additionally" id="milk" value="milk">
           Молоко
         </label>
-        <label class="form__label">
+        <label class="form__label form__label--additionally">
           <input class="checkbox" type="checkbox" name="additionally" id="vitamins" value="vitamins">
           Витамины
         </label>
@@ -133,16 +135,20 @@
     <div class="wrapper wrapper--contacts">
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="contacts__info container">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__info-and-map-container">
+          <div class="contacts__info">
+            <p class="contacts__title">
+              Приглашаем<br>
+              к сотрудничеству дилеров!
+            </p>
+            <address class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8
+              <p class="contacts__empty-line"></p>
+              Санкт-Петербург
+            </address>
+          </div>
+          <div class="contacts__map" id="map"></div>
         </div>
-        <!-- Потом здесь будет карта -->
-        <picture>
-          <source type="image/png" media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
-          <source type="image/png" media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
-          <img class="contacts__img" width="320" height="362" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="">
-        </picture>
       </section>
     </div>
     <div class="wrapper wrapper--bottom">
@@ -180,6 +186,7 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/v3/?apikey=7e3ff21a-0824-441d-88bc-636463e96f4e&lang=ru_RU"></script>
 </body>
 
 </html>

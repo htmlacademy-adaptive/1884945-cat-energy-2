@@ -1,8 +1,6 @@
 .button {
   @include reset-button;
 
-  min-width: 100%;
-  min-height: 40px;
   padding: 10px;
 
   text-transform: uppercase;

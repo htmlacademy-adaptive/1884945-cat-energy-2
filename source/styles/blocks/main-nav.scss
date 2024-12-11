@@ -1,3 +1,44 @@
+.main-nav {
+  font-size: 20px;
+  line-height: 20px;
+  color: $text-color-dark-primary;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $max-width-mobile) {
+    &--no-js {
+      width: 100%;
+      padding-top: 15px;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    align-self: end;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    max-width: 50%;
+    padding-left: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &--index {
+      color: $text-color-light-primary;
+    }
+
+    &--catalog {
+      color: $text-color-dark-special-1;
+    }
+
+    &--form {
+      color: $text-color-dark-special-1;
+    }
+  }
+}
+
 .main-nav__list {
   @include reset-list;
 
@@ -11,15 +52,35 @@
     &--closed {
       display: none;
     }
+
+    &--no-js {
+      position: relative;
+      width: calc(100% + 2*$padding-x-mobile);
+      margin-left: -$padding-x-mobile;
+      margin-right: -$padding-x-mobile;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 34px;
+    padding-right: 4px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    gap: 16px 32px;
   }
 }
 
 .main-nav__item {
   @media (max-width: $max-width-mobile) {
-    @include container;
-
     border-top: solid 2px $border-color-dark-special-1;
     background-color: $background-color-primary;
+
+    &:last-of-type {
+      border-bottom: solid 2px $border-color-dark-special-1;
+    }
   }
 }
 
@@ -27,14 +88,12 @@
   @include reset-link;
 
   display: inline-block;
-  padding-bottom: 10px;
+  margin-bottom: 2px;
+  padding-bottom: 8px;
 
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  color: $text-color-dark-primary;
+  color: inherit;
 
+  border-bottom: solid 2px transparent;
   cursor: pointer;
 
   &:not(.main-nav__link--current):hover {
@@ -56,17 +115,31 @@
   }
 
   &--current {
-    border-bottom: solid 4px $border-color-accent;
+    border-bottom: solid 2px $border-color-accent;
     cursor: default;
   }
 
   @media (max-width: $max-width-mobile) {
     display: block;
+    margin-bottom: 0;
     padding-top: 22px;
     padding-bottom: 22px;
+
+    border: 0;
 
     &--current {
       border-bottom: none;
     }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 5px;
+    padding-bottom: 11px;
+  }
+}
+
+.main-nav--index .main-nav__link--current {
+  @media (min-width: $min-width-desktop) {
+    border-bottom: solid 2px $border-color-light-primary;
   }
 }

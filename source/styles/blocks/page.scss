@@ -3,9 +3,36 @@
 }
 
 .page__title {
+  padding-top: 27px;
+  padding-bottom: 40px;
+
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  border-top: solid 1px $border-color-dark-secondary;
+
+  &--form {
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    padding-top: 40px;
+    padding-bottom: 84px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    border-top: none;
+
+    &--form {
+      padding-bottom: 55px;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 45px;
+  }
 }
 
 .page__body {

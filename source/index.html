@@ -15,7 +15,7 @@
 
 <body class="page__body">
 
-  <header class="header container">
+  <header class="header header--no-js container">
     <a class="header__logo" href="index.html">
       <span class="visually-hidden">Перейти на гланую страницу</span>
       <picture>
@@ -24,12 +24,12 @@
         <img class="header__img" width="33" height="38" src="./images/logos/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--secondary" href="index.html">
+    <a class="header__logo header__logo--secondary header__logo--no-js" href="index.html">
       <span class="visually-hidden">Перейти на гланую страницу</span>
-      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
+      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text-header.svg" alt="Текстовый логотип Cat Energy">
     </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list main-nav__list--closed">
+    <nav class="main-nav main-nav--no-js main-nav--index">
+      <ul class="main-nav__list main-nav__list--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
         </li>
@@ -40,8 +40,8 @@
           <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
-      <button class="burger-toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+      <button class="burger-toggle burger-toggle--no-js opened-nav" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
       </button>
     </nav>
   </header>
@@ -51,11 +51,14 @@
 
     <div class="wrapper wrapper--intro">
       <section class="intro container">
-        <h2 class="intro__title">Функциональное питание для котов</h2>
+        <h2 class="intro__title">
+          Функциональное<br>
+          питание для котов
+        </h2>
         <p class="intro__text">Занялся собой? Займись котом!</p>
         <picture>
           <source type="image/png" media="(min-width: 1440px)" width="552" height="499" srcset="images/intro/can-desktop@1x.png 1x, images/intro/can-desktop@2x.png 2x">
-          <source type="image/png" media="(min-width: 768px)" width="709" height="609" srcset="images/intro/can-tablet@1x.png 1x, images/intro/can-tablet@2x.png 2x">
+          <source type="image/png" media="(min-width: 768px)" width="708" height="609" srcset="images/intro/can-tablet@1x.png 1x, images/intro/can-tablet@2x.png 2x">
           <img class="intro__img" width="280" height="270" src="images/intro/can-mobile@1x.png" srcset="images/intro/can-mobile@2x.png 2x" alt="Банка с кормом Cat Energy">
         </picture>
         <a class="intro__button button button--primary" href="form.html">Подобрать программу</a>
@@ -115,6 +118,10 @@
             <dt class="example__property">затрачено времени</dt>
             <dd class="example__value">60 ДНЕЙ</dd>
           </div>
+          <div class="example__item example__item--total">
+            <dt class="example__property example__property--total">Затраты на питание:</dt>
+            <dd class="example__value example__value--total">15 000 руб.</dd>
+          </div>
         </dl>
         <div class="example__compare-slider compare-slider ">
           <picture>
@@ -127,6 +134,7 @@
           </picture>
           <label class="visually-hidden" for="compare-slider">До и после</label>
           <input class="compare-slider__range" type="range" min="0" max="100" value="50" id="compare-slider" name="compare-slider">
+          <div class="compare-slider__thumb"></div>
         </div>
       </section>
     </div>
@@ -137,16 +145,20 @@
     <div class="wrapper wrapper--contacts">
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="contacts__info container">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__info-and-map-container">
+          <div class="contacts__info contacts__info--index">
+            <p class="contacts__title">
+              Приглашаем<br>
+              к сотрудничеству дилеров!
+            </p>
+            <address class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8
+              <p class="contacts__empty-line"></p>
+              Санкт-Петербург
+            </address>
+          </div>
+          <div class="contacts__map" id="map"></div>
         </div>
-        <!-- Потом здесь будет карта -->
-        <picture>
-          <source type="image/png" media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
-          <source type="image/png" media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
-          <img class="contacts__img" width="320" height="362" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="">
-        </picture>
       </section>
     </div>
     <div class="wrapper wrapper--bottom">
@@ -184,6 +196,7 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/v3/?apikey=7e3ff21a-0824-441d-88bc-636463e96f4e&lang=ru_RU"></script>
 </body>
 
 </html>

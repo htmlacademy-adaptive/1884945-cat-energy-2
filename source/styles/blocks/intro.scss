@@ -4,6 +4,20 @@
 
   text-align: center;
   color: $text-color-light-primary;
+
+  @media (min-width: $min-width-tablet) {
+    position: relative;
+
+    min-height: 850px;
+    padding: 40px 120px 0;
+
+    color: $text-color-dark-primary;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-height: 551px;
+    padding: 82px 720px 110px 190px;
+  }
 }
 
 .intro__title {
@@ -12,6 +26,14 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 40px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
 }
 
 .intro__text {
@@ -20,11 +42,34 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
 }
 
 .intro__img {
   display: block;
   margin: 0 auto 3px;
+
+  @media (min-width: $min-width-tablet) {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    top: 0;
+    margin-right: 330px;
+  }
 }
 
 .intro__button {
@@ -32,4 +77,12 @@
 
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 14px;
+    width: 242px;
+
+    font-size: 20px;
+    line-height: 26px;
+  }
 }

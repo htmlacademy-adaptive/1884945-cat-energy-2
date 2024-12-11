@@ -15,20 +15,21 @@
 
 <body class="page__body">
 
-  <header class="header container">
+  <header class="header header--no-js container">
     <a class="header__logo" href="index.html">
+      <span class="visually-hidden">Перейти на гланую страницу</span>
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="./images/logos/logo-desktop.svg" width="202" height="59">
         <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logos/logo-tablet.svg" width="174" height="50">
         <img class="header__img" width="33" height="38" src="./images/logos/logo-mobile.svg" alt="Логотип Cat Energy">
       </picture>
     </a>
-    <a class="header__logo header__logo--secondary" href="index.html">
+    <a class="header__logo header__logo--secondary header__logo--no-js" href="index.html">
       <span class="visually-hidden">Перейти на гланую страницу</span>
-      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text.svg" alt="Текстовый логотип Cat Energy">
+      <img class="header__img" width="101" height="18" src="../../images/logos/logo-text-header.svg" alt="Текстовый логотип Cat Energy">
     </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list main-nav__list--closed">
+    <nav class="main-nav main-nav--no-js main-nav--catalog">
+      <ul class="main-nav__list main-nav__list--no-js">
         <li class="main-nav__item">
           <a class="main-nav__link" href="./index.html">Главная</a>
         </li>
@@ -39,7 +40,7 @@
           <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
-      <button class="burger-toggle" type="button">
+      <button class="burger-toggle burger-toggle--no-js opened-nav" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </nav>
@@ -91,7 +92,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 1000 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">1000 г</dd>
@@ -120,7 +121,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 500 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">500 г</dd>
@@ -149,7 +150,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy PRO 1000 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">1000 г</dd>
@@ -178,7 +179,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy SLIM 500 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">500 г</dd>
@@ -207,7 +208,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy SLIM 1000 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">1000 г</dd>
@@ -236,7 +237,7 @@
           <a class="main-card__title-link" href="#">
             <h3 class="main-card__title">Cat Energy slim 500 г</h3>
           </a>
-          <dl class="main-card__dl">
+          <dl class="main-card__list">
             <div class="main-card__item">
               <dt class="main-card__property">Масса</dt>
               <dd class="main-card__value">500 г</dd>
@@ -254,7 +255,7 @@
         </li>
 
         <li class="main-card main-card--special">
-          <h3 class="main-card__title">Показать еще 100500 товаров</h3>
+          <h3 class="main-card__title main-card__title--special">Показать еще 100500 товаров</h3>
           <p class="main-card__text">На самом деле вкусов гораздо больше!</p>
           <a class="main-card__button button button--secondary" href="#">Показать все</a>
         </li>
@@ -314,12 +315,15 @@
         </li>
       </ul>
       <div class="gift">
-        <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+        <p class="gift__text">
+          Закажите все<br>
+          и получите чехол для кота в подарок!
+        </p>
       </div>
     </section>
 
     <section class="subscribe container">
-      <h2 class="subscribe__title container">Акции и новинки</h2>
+      <h2 class="subscribe__title">Акции и новинки</h2>
       <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="email">email</label>
@@ -334,16 +338,20 @@
     <div class="wrapper wrapper--contacts">
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="contacts__info container">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="contacts__info-and-map-container">
+          <div class="contacts__info">
+            <p class="contacts__title">
+              Приглашаем<br>
+              к сотрудничеству дилеров!
+            </p>
+            <address class="contacts__address">
+              ул. Большая Конюшенная, д. 19/8
+              <p class="contacts__empty-line"></p>
+              Санкт-Петербург
+            </address>
+          </div>
+          <div class="contacts__map" id="map"></div>
         </div>
-        <!-- Потом здесь будет карта -->
-        <picture>
-          <source type="image/png" media="(min-width: 1440px)" width="1440" height="400" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
-          <source type="image/png" media="(min-width: 768px)" width="768" height="400" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
-          <img class="contacts__img" width="320" height="362" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" alt="">
-        </picture>
       </section>
     </div>
     <div class="wrapper wrapper--bottom">
@@ -381,6 +389,7 @@
     </div>
   </footer>
 
+  <script src="https://api-maps.yandex.ru/v3/?apikey=7e3ff21a-0824-441d-88bc-636463e96f4e&lang=ru_RU"></script>
 </body>
 
 </html>

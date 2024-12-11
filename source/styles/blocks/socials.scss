@@ -1,5 +1,21 @@
 .socials {
   @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 0;
+
+
+  border-top: solid 1px $border-color-dark-secondary;
+  border-bottom: solid 1px $border-color-dark-secondary;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 0 40px;
+    padding: 0;
+    border: none;
+  }
 }
 
 .socials__link {

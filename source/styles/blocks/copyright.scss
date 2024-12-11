@@ -5,11 +5,16 @@
   justify-content: space-between;
   align-items: center;
 
+  font-family: $font-family-secondary;
   font-size: 16px;
   line-height: 20px;
   color: $text-color-dark-secondary;
 
   cursor: pointer;
+
+  @media (min-width: $min-width-tablet) {
+    gap: 23px;
+  }
 
   &:hover .copyright__icon {
     @include transition;

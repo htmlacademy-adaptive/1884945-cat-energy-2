@@ -2,12 +2,19 @@
   appearance: none;
   position: relative;
   margin: 0;
+  min-width: 30px;
   width: 30px;
   height: 30px;
 
   border: solid 1px $border-color-dark-primary;
   background-color: $background-color-primary;
   cursor: pointer;
+
+  @media (min-width: $min-width-tablet) {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+  }
 
   &::after {
     content: "";
@@ -26,6 +33,11 @@
     background-image: url("../../icons/stack.svg#checkbox-flag");
     background-position: center center;
     background-repeat: no-repeat;
+
+    @media (min-width: $min-width-tablet) {
+      width: 24px;
+      height: 19px;
+    }
   }
 
   &:hover {

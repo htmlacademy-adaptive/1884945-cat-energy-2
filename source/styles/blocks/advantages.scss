@@ -43,21 +43,6 @@
   gap: 20px;
   align-items: center;
 
-  @media (min-width: $min-width-tablet) {
-    position: relative;
-
-    flex-direction: column;
-    gap: 31px;
-    align-items: start;
-    padding: 40px 75px 40px 0;
-
-    counter-increment: item;
-
-    @media (min-width: $min-width-desktop) {
-      padding: 40px 0;
-    }
-  }
-
   &::before {
     content: "";
 
@@ -91,6 +76,21 @@
     }
   }
 
+  @media (min-width: $min-width-tablet) {
+    position: relative;
+
+    flex-direction: column;
+    gap: 31px;
+    align-items: start;
+    padding: 40px 75px 40px 0;
+
+    counter-increment: item;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 40px 0;
+  }
+
   &--leaf::before {
     background-image: url("../../icons/stack.svg#leaf");
     background-size: 30px 32px;
@@ -114,12 +114,14 @@
 
 .advantages__title {
   margin: 0 0 40px;
+
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
 
   @media (min-width: $min-width-tablet) {
     margin: 0 0 32px;
+
     font-size: 60px;
     line-height: 60px;
   }

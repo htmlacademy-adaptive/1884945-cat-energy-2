@@ -1,5 +1,6 @@
 .compare-slider {
   position: relative;
+
   color: $compare-slider-button-color;
 
   &:has(.compare-slider__range:hover) {

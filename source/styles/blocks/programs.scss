@@ -131,13 +131,6 @@
   text-transform: uppercase;
   color: $text-color-dark-primary;
 
-  @media (min-width: $min-width-tablet) {
-    column-gap: 25px;
-
-    font-size: 20px;
-    line-height: 20px;
-  }
-
   &::after {
     content: "";
     display: inline-block;
@@ -150,11 +143,20 @@
 
   &:hover::after {
     @include transition;
+
     mask-image: url("../../icons/stack.svg#arrow-hover");
   }
 
   &:active {
     @include transition;
+
     opacity: 0.3;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    column-gap: 25px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 }

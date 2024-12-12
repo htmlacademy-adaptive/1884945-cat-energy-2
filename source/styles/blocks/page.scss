@@ -12,10 +12,6 @@
 
   border-top: solid 1px $border-color-dark-secondary;
 
-  &--form {
-    padding-bottom: 38px;
-  }
-
   @media (min-width: $min-width-tablet) {
     padding-top: 40px;
     padding-bottom: 84px;
@@ -24,14 +20,18 @@
     line-height: 60px;
 
     border-top: none;
-
-    &--form {
-      padding-bottom: 55px;
-    }
   }
 
   @media (min-width: $min-width-desktop) {
     padding-top: 45px;
+  }
+
+  &--form {
+    padding-bottom: 38px;
+
+    @media (min-width: $min-width-tablet) {
+      padding-bottom: 55px;
+    }
   }
 }
 

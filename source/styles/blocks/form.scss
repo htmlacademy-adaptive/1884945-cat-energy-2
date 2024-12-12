@@ -271,6 +271,10 @@
 
 .form__input[type="number"] {
   appearance: textfield;
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
 .form__input[type="email"] {
@@ -317,13 +321,6 @@
 
   resize: none;
 
-  @media (min-width: $min-width-tablet) {
-    padding: 11px 10px 11px 20px;
-
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   &::placeholder {
     color: $text-color-dark-secondary;
   }
@@ -341,6 +338,13 @@
     @media (min-width: $min-width-tablet) {
       padding: 10px 9px 10px 19px;
     }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    padding: 11px 10px 11px 20px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

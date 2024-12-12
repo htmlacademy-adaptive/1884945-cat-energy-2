@@ -12,10 +12,6 @@
 
   cursor: pointer;
 
-  @media (min-width: $min-width-tablet) {
-    gap: 23px;
-  }
-
   &:hover .copyright__icon {
     @include transition;
 
@@ -33,11 +29,16 @@
 
     opacity: 0.3;
   }
+
+  @media (min-width: $min-width-tablet) {
+    gap: 23px;
+  }
 }
 
 .copyright__icon {
   width: 27px;
   height: 34px;
+
   mask-image: url("../../icons/stack.svg#html-academy");
   background-color: $icons-color-dark-secondary;
 }

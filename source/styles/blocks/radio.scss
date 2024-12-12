@@ -12,12 +12,6 @@
   background-color: $background-color-primary;
   cursor: pointer;
 
-  @media (min-width: $min-width-tablet) {
-    min-width: 40px;
-    width: 40px;
-    height: 40px;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -45,5 +39,11 @@
 
   &:hover {
     border: solid 1px $border-color-checkbox-hover;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
   }
 }

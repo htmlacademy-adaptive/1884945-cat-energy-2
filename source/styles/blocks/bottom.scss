@@ -1,0 +1,49 @@
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-width-tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 56px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+
+.bottom__logo {
+  cursor: pointer;
+
+  &:hover {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    @include transition;
+    opacity: 0.8;
+  }
+
+  &:active {
+    @include transition;
+    opacity: 0.6;
+  }
+}
+
+.bottom__img {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0;
+  }
+}

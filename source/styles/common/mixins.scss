@@ -1,0 +1,158 @@
+@mixin font-face($font-family, $font-style, $font-weight, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@mixin reset-link {
+  display: block;
+
+  text-decoration: none;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin reset-button {
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+@mixin container {
+  min-width: $min-width-mobile;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding-x-mobile;
+  padding-right: $padding-x-mobile;
+
+  @media (min-width: $min-width-tablet) {
+    min-width: $min-width-tablet;
+    padding-left: $padding-x-tablet;
+    padding-right: $padding-x-tablet;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: $min-width-desktop;
+    max-width: $max-width-desktop;
+    padding-left: $padding-x-desktop;
+    padding-right: $padding-x-desktop;
+  }
+}
+
+@mixin transition {
+  transition: $transition-time;
+}
+
+@mixin mask ($mask-image, $base-color, $hover-color, $focus-hover, $active-color) {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $base-color;
+    mask-image: url($mask-image);
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover::before {
+    @include transition;
+
+    background-color: $hover-color;
+  }
+
+  &:focus::before {
+    @include transition;
+
+    background-color: $focus-hover;
+  }
+
+  &:active::before {
+    @include transition;
+
+    background-color: $active-color;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin accent-title (
+  $title-font-size-mobile: 24,
+  $title-font-size-tablet: 32,
+  $title-font-size-desktop: 40,
+  $from-title-to-border-distance: 40
+) {
+  position: relative;
+  margin: 0 0 0 (-$from-title-to-border-distance);
+  padding: 0 $from-title-to-border-distance;
+  width: fit-content;
+
+  font-size: $title-font-size-mobile;
+  line-height: $title-font-size-mobile*1px;
+  font-weight: 400;
+
+  background-color: $background-color-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(($title-font-size-mobile / 2) - 2);
+    right: 0;
+    z-index: -1;
+
+    width: 100vw;
+    height: 2px;
+    background-color: $border-color-accent;
+
+    box-shadow: 100vw 0 0 0 $border-color-accent;
+
+    @media (min-width: $min-width-tablet) {
+      top: calc(($title-font-size-tablet / 2) - 2);
+    }
+
+    @media (min-width: $min-width-desktop) {
+      top: calc(($title-font-size-desktop / 2) - 2);
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0;
+
+    font-size: $title-font-size-tablet;
+    line-height: $title-font-size-tablet*1px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin: 0 0 0 (-$from-title-to-border-distance);
+
+    font-size: $title-font-size-desktop;
+    line-height: $title-font-size-desktop*1px;
+  }
+}

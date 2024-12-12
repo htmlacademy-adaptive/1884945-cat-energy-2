@@ -1,0 +1,48 @@
+.gift {
+  padding: 187px 55px 40px;
+  width: 100%;
+  min-height: 290px;
+
+  background:
+    url("../../icons/stack.svg#gift")  center 59px / 78px 80px no-repeat,
+    linear-gradient(to right, rgba($background-color-accent, 0.85), rgba($background-color-accent, 0.85)),
+    image-set(url("../../images/backgrounds/gift-mobile@1x.jpg") 1x, url("../../images/backgrounds/gift-mobile@2x.jpg") 2x) center no-repeat $background-color-gift-substrate;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 70px 120px 40px 421px;
+    min-height: 200px;
+
+    background:
+      url("../../icons/stack.svg#gift")  78px 56px / 80px 83px no-repeat,
+      linear-gradient(to right, rgba($background-color-accent, 0.85), rgba($background-color-accent, 0.85)),
+      image-set(url("../../images/backgrounds/gift-tablet@1x.jpg") 1x, url("../../images/backgrounds/gift-tablet@2x.jpg") 2x) center no-repeat $background-color-gift-substrate;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 185px 42px 40px;
+    min-height: 288px;
+
+    background:
+      url("../../icons/stack.svg#gift")  center 57px / 80px 83px no-repeat,
+      linear-gradient(to right, rgba($background-color-accent, 0.85), rgba($background-color-accent, 0.85)),
+      image-set(url("../../images/backgrounds/gift-desktop@1x.jpg") 1x, url("../../images/backgrounds/gift-desktop@2x.jpg") 2x) center top no-repeat $background-color-gift-substrate;
+  }
+}
+
+.gift__text {
+  margin: 0;
+
+  font-family: $font-family-secondary;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-color-light-primary;
+  text-align: center;
+
+  @media (min-width: $min-width-tablet) {
+    text-align: start;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    text-align: center;
+  }
+}

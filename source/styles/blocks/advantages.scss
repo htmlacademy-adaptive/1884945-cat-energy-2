@@ -1,0 +1,143 @@
+.advantages {
+  padding-top: 10px;
+  padding-bottom: 49px;
+
+  @media (min-width: $min-width-tablet) {
+    padding-top: 45px;
+    padding-bottom: 63px;
+
+    border-bottom: solid 1px $border-color-dark-special-1;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 36px;
+    padding-bottom: 86px;
+
+    border: none;
+  }
+}
+
+.advantages__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 54px 60px;
+
+    counter-reset: item 0;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  &::before {
+    content: "";
+
+    display: block;
+    min-width: 60px;
+    height: 60px;
+
+    background-color: $background-color-accent;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $min-width-tablet) {
+      min-width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $min-width-tablet) {
+      content: counter(item);
+
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: -1;
+
+      font-family: $font-family-primary;
+      font-size: 280px;
+      line-height: 280px;
+      color: $background-color-secondary;
+    }
+  }
+
+  @media (min-width: $min-width-tablet) {
+    position: relative;
+
+    flex-direction: column;
+    gap: 31px;
+    align-items: start;
+    padding: 40px 75px 40px 0;
+
+    counter-increment: item;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 40px 0;
+  }
+
+  &--leaf::before {
+    background-image: url("../../icons/stack.svg#leaf");
+    background-size: 30px 32px;
+  }
+
+  &--chemistry::before {
+    background-image: url("../../icons/stack.svg#chemistry");
+    background-size: 26px 29px;
+  }
+
+  &--eat::before {
+    background-image: url("../../icons/stack.svg#eat");
+    background-size: 25px 30px;
+  }
+
+  &--scales::before {
+    background-image: url("../../icons/stack.svg#scales");
+    background-size: 26px 31px;
+  }
+}
+
+.advantages__title {
+  margin: 0 0 40px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 32px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-dark-secondary;
+  text-wrap: pretty;
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

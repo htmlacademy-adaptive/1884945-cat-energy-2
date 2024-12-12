@@ -1,0 +1,45 @@
+.button {
+  @include reset-button;
+
+  padding: 10px;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+
+  &--primary {
+    color: $text-color-light-primary;
+    background-color: $button-primary-bg-color;
+
+    &:hover {
+      @include transition;
+
+      background-color: $button-primary-bg-color-hover;
+    }
+
+    &:active {
+      @include transition;
+
+      color: rgba($text-color-light-primary, 0.3);
+      background-color: $button-primary-bg-color-active;
+    }
+  }
+
+  &--secondary {
+    color: $text-color-dark-secondary;
+    background-color: $button-secondary-bg-color;
+
+    &:hover {
+      @include transition;
+
+      background-color: $button-secondary-bg-color-hover;
+    }
+
+    &:active {
+      @include transition;
+
+      background-color: $button-secondary-bg-color-active;
+    }
+  }
+}

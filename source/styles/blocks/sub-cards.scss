@@ -1,0 +1,15 @@
+.sub-cards {
+  @include reset-list;
+
+  margin: 0 0 35px;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 70px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: 1 / span 1;
+
+    margin: 0;
+  }
+}

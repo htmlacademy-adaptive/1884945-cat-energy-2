@@ -1,0 +1,119 @@
+.compare-slider {
+  position: relative;
+
+  color: $compare-slider-button-color;
+
+  &:has(.compare-slider__range:hover) {
+    @include transition;
+
+    color: $compare-slider-button-color-hover;
+  }
+
+  &:has(.compare-slider__range:focus) {
+    @include transition;
+
+    color: $compare-slider-button-color-hover;
+  }
+
+  &:has(.compare-slider__range:active) {
+    @include transition;
+
+    color: $compare-slider-button-color-active;
+  }
+}
+
+.compare-slider__img {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 0.91;
+
+
+  &--before {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  &--after {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+}
+
+.compare-slider__range {
+  appearance: none;
+  position: absolute;
+
+  width: calc(100% + 40px);
+  height: 100%;
+  margin: 0 0 0 -20px;
+
+  background-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb,
+  &::-ms-thumb {
+    appearance: none;
+
+    margin: 0;
+    width: 40px;
+    height: 100%;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: col-resize;
+    pointer-events: auto;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 100%;
+  }
+}
+
+.compare-slider__thumb {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+
+  background-color: currentColor;
+  border-radius: 2px;
+
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+
+    background-color: $background-color-primary;
+    border: solid 2px currentColor;
+    border-radius: 50%;
+
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 18px;
+
+    background-color: currentColor;
+    mask-image: url("../../icons/stack.svg#compare-slider-arrows");
+
+    pointer-events: none;
+  }
+}

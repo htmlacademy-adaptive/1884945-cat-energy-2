@@ -1,0 +1,229 @@
+.example {
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: $min-width-tablet) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    padding-top: 0;
+    padding-bottom: 22px;
+  }
+}
+
+.example__title {
+  margin: 0 0 40px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 60px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    margin: 0 0 146px;
+  }
+}
+
+.example__text {
+  margin: 0 0 20px;
+
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-dark-secondary;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 55px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    margin: 0;
+    padding: 0 128px 68px 0;
+  }
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  gap: 34px 32px;
+  margin: 0 auto 20px;
+  width: min-content;
+
+
+  @media (min-width: $min-width-tablet) {
+    grid-template-columns: 162px 162px 300px;
+    column-gap: 42px;
+    width: auto;
+    margin: 0 0 104px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-template-columns: 162px 162px 152px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    row-gap: 60px;
+    margin: 0;
+  }
+}
+
+.example__item {
+  position: relative;
+
+  display: flex;
+  padding: 14px 14px 16px;
+
+  border: solid 1px $border-color-dark-primary;
+  border-radius: 3px;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 15px 29px 18px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 0 29px;
+    min-height: 73px;
+  }
+
+  &--total {
+    grid-column: span 2;
+
+    justify-content: center;
+    gap: 3px;
+    padding: 0;
+
+    border: none;
+
+    @media (min-width: $min-width-tablet) {
+      grid-column: span 1;
+
+      flex-direction: column;
+      align-items: end;
+      gap: 9px;
+    }
+
+    @media (min-width: $min-width-desktop) {
+      grid-column: 1 / span 3;
+
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: start;
+      gap: 64px;
+    }
+  }
+}
+
+.example__property {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(16px);
+
+  max-width: 95%;
+  padding: 0 15px;
+
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  line-height: 12px;
+  color: $text-color-dark-secondary;
+  text-align: center;
+
+  background-color: $background-color-special;
+
+  @media (min-width: $min-width-tablet) {
+    transform: translateX(-50%) translateY(7px);
+
+    width: max-content;
+    padding: 0 8px 0 10px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $background-color-primary;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    background-color: $background-color-special;
+  }
+
+  &--total {
+    position: static;
+    transform: none;
+
+    padding: 0;
+
+    font-family: $font-family-primary;
+    font-size: 14px;
+    line-height: 20px;
+    color: inherit;
+    text-transform: uppercase;
+
+    @media (min-width: $min-width-tablet) {
+      font-size: 20px;
+    }
+  }
+}
+
+.example__value {
+  margin: auto;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin: 15px auto 10px;
+  }
+
+  &--total {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @media (min-width: $min-width-tablet) {
+      font-size: 20px;
+    }
+  }
+}
+
+.example__compare-slider {
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: $min-width-tablet) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: -1 / 2;
+    grid-row: 1 / span 3;
+  }
+}

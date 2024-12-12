@@ -1,0 +1,123 @@
+.sub-card {
+  padding: 13px 0 18px;
+  border-top: solid 1px $border-color-dark-primary;
+
+  &:last-child {
+    border-bottom: solid 1px $border-color-dark-primary;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 60px;
+    padding: 26px 38px 27px;
+
+    border-left: solid 1px $border-color-dark-primary;
+    border-right: solid 1px $border-color-dark-primary;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-template-columns: 286px 285px 244px;
+    gap: 0 40px;
+    align-items: center;
+    padding: 15px 0 16px;
+
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.sub-card__title-link {
+  @include reset-link;
+
+  @media (min-width: $min-width-tablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: 1 / span 1;
+  }
+}
+
+.sub-card__title {
+  margin: 0 0 13px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-color-dark-special-1;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $text-color-dark-special-2;
+  }
+}
+
+.sub-card__list {
+  @include reset-list;
+
+  @media (min-width: $min-width-tablet) {
+    grid-column: 3 / span 2;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: 2 / span 1;
+  }
+}
+
+.sub-card__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px;
+
+  font-family: $font-family-secondary;
+  font-size: 14px;
+  line-height: 14px;
+  color: $text-color-dark-secondary;
+
+  @media (min-width: $min-width-tablet) {
+    display: grid;
+    align-self: flex-end;
+    grid-template-columns: 1fr 82px;
+    column-gap: 10px;
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 8px;
+    max-width: 896px;
+
+    text-align: start;
+  }
+}
+
+.sub-card__price {
+  margin: 0;
+
+  @media (min-width: $min-width-desktop) {
+    text-align: end;
+  }
+}
+
+.sub-card__button {
+  @include reset-link;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    grid-column: span 1 / -1;
+  }
+}

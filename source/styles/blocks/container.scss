@@ -1,0 +1,24 @@
+.container {
+  min-width: $min-width-mobile;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $padding-x-mobile;
+  padding-right: $padding-x-mobile;
+
+  @media (min-width: $min-width-tablet) {
+    min-width: $min-width-tablet;
+    padding-left: $padding-x-tablet;
+    padding-right: $padding-x-tablet;
+
+    &--form-tablet {
+      padding-left: $padding-x-tablet-form;
+      padding-right: $padding-x-tablet-form;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: $min-width-desktop;
+    padding-left: $padding-x-desktop;
+    padding-right: $padding-x-desktop;
+  }
+}
